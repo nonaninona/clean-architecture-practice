@@ -3,12 +3,13 @@ package org.example.part4.buckpal.application.port.in;
 import static java.util.Objects.requireNonNull;
 
 import javax.validation.ConstraintViolationException;
+import lombok.Getter;
 import lombok.NonNull;
 import org.example.part4.buckpal.domain.Account.AccountId;
 import org.example.part4.buckpal.domain.Money;
 import org.example.part4.common.SelfValidating;
 
-
+@Getter
 public class SendMoneyCommand extends SelfValidating<SendMoneyCommand> {
     @NonNull
     private final AccountId sourceAccountId;

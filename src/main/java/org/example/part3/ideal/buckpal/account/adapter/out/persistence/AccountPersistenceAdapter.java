@@ -1,6 +1,8 @@
 package org.example.part3.ideal.buckpal.account.adapter.out.persistence;
 
-class AccountPersistenceAdapter {
+import org.example.part3.ideal.buckpal.account.application.port.out.LoadAccountPort;
+
+class AccountPersistenceAdapter implements LoadAccountPort {
     //난 LoadAccountPort나 UpdateAccountStatePort를 구현해
     //어차피 application 내부에서 나를 호출하려면 해당 인터페이스들을 통하기 때문에,
     //난 package-private이어도 상관없어.

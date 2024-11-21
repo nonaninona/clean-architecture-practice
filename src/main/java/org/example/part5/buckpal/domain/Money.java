@@ -2,9 +2,12 @@ package org.example.part5.buckpal.domain;
 
 import java.math.BigInteger;
 import lombok.AllArgsConstructor;
+import lombok.Getter;
 import lombok.NonNull;
+import lombok.Value;
 
 @AllArgsConstructor
+@Getter
 public class Money {
     public static Money ZERO = Money.of(0L);
 

@@ -53,6 +53,7 @@ public class Account {
         return true;
     }
 
+    @AllArgsConstructor
     public static class AccountId {
         private Long value;
     }

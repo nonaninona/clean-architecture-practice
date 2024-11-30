@@ -18,6 +18,21 @@ public class Account {
         return Money.add(baselineBalance, activityWindow.calculateBalance(this.id));
     }
 
+    public static Account withoutId(
+            Money baselineBalance,
+            AcitivityWindow activityWindow
+    ) {
+        return new Account(null, baselineBalance, activityWindow);
+    }
+
+    public static Account widthId(
+            AccountId accountId,
+            Money baselineBalance,
+            AcitivityWindow activityWindow
+    ) {
+        return new Account(accountId, baselineBalance, activityWindow);
+    }
+
     //출금
     public boolean withdraw(Money money, AccountId targetAccountId) {
         if(!mayWithdraw(money)) {
@@ -56,5 +71,9 @@ public class Account {
     @AllArgsConstructor
     public static class AccountId {
         private Long value;
+
+        public Long getValue() {
+            return value;
+        }
     }
 }
